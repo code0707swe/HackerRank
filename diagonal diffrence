@@ -1,0 +1,10 @@
+a=int(input())
+b=[]
+for i in range(a):
+    b.append(list(map(int, input().strip().split())))
+sa=sb=0
+for i in range(a):
+    sa=b[i][i]+sa
+    sb=b[i][a-1-i]+sb
+ans=abs(sa-sb)
+print(ans)
